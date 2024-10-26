@@ -1,0 +1,36 @@
+/*Write a program to enter student roll_number, name and address using
+structure.(Take records of 2 students and display it) */
+#include <iostream>
+
+using namespace std;
+
+struct Student {
+    int roll_number;
+    string name;
+    string address;
+};
+
+int main() {
+    Student students[2];
+
+    for (int i = 0; i < 2; i++) {
+        cout << "Enter details for student " << i + 1 << ":\n";
+        cout << "Roll Number: ";
+        cin >> students[i].roll_number;
+        cout << "Name: ";
+        cin.ignore(); // Ignore newline character
+        getline(cin, students[i].name);
+        cout << "Address: ";
+        getline(cin, students[i].address);
+    }
+
+    cout << "\nStudent Details:\n";
+    for (int i = 0; i < 2; i++) {
+        cout << "Roll Number: " << students[i].roll_number << endl;
+        cout << "Name: " << students[i].name << endl;
+        cout << "Address: " << students[i].address << endl;
+        cout << endl;
+    }
+
+    return 0;
+}

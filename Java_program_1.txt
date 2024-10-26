@@ -1,0 +1,18 @@
+/*1. Write Java Program to Accept marks from user, if marks greater than or equal to
+40, then declare the Student as “Pass” else “Fail”.(Use of Scanner Class). 
+*/
+import java.util.Scanner;
+
+public class PassFail {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter marks: ");
+        int marks = scanner.nextInt();
+
+        if (marks >= 40) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}

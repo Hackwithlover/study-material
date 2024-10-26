@@ -1,0 +1,35 @@
+
+/*Write C++ program to implement multiple Inheritance */
+#include <iostream>
+
+using namespace std;
+
+class A {
+public:
+    void funcA() {
+        cout << "Function A\n";
+    }
+};
+
+class B {
+public:
+    void funcB() {
+        cout << "Function B\n";
+    }
+};
+
+class C : public A, public B {
+public:
+    void funcC() {
+        cout << "Function C\n";
+    }
+};
+
+int main() {
+    C obj;
+    obj.funcA();
+    obj.funcB();
+    obj.funcC();
+
+    return 0;
+}

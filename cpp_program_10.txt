@@ -1,0 +1,36 @@
+/* Create a class for student to get and print details of a student.
+(functions declares inside the class)(Using C++)*/
+#include <iostream>
+
+using namespace std;
+
+class Student {
+public:
+    int roll_number;
+    string name;
+    string address;
+
+    void getDetails() {
+        cout << "Enter Roll Number: ";
+        cin >> roll_number;
+        cout << "Enter Name: ";
+        cin.ignore(); // Ignore newline character
+        getline(cin, name);
+        cout << "Enter Address: ";
+        getline(cin, address);
+    }
+
+    void printDetails() {
+        cout << "Roll Number: " << roll_number << endl;
+        cout << "Name: " << name << endl;
+        cout << "Address: " << address << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.getDetails();
+    s.printDetails();
+
+    return 0;
+}

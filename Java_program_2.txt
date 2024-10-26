@@ -1,0 +1,27 @@
+/* Write Java Program to calculate Volume of box using constructor Overloading
+concept.*/
+public class Box {
+    int length, breadth, height;
+
+    Box(int side) {
+        length = breadth = height = side;
+    }
+
+    Box(int l, int b, int h) {
+        length = l;
+        breadth = b;
+        height = h;
+    }
+
+    int volume() {
+        return length * breadth * height;
+    }
+
+    public static void main(String[] args) {
+        Box cube = new Box(5);
+        Box cuboid = new Box(4, 3, 2);
+
+        System.out.println("Volume of cube: " + cube.volume());
+        System.out.println("Volume of cuboid: " + cuboid.volume());
+    }
+}

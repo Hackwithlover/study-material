@@ -1,0 +1,39 @@
+/*Write a C++ program to give instructions to a robot using following keys:
+a : move left, b : move right, c: move forward, d: move backward, e : jump,
+f: stop
+default:You have selected wrong key, please try again */
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char key;
+
+    while (true) {
+        cout << "Enter a key (a, b, c, d, e, f): ";
+        cin >> key;
+
+        switch (key) {
+            case 'a':
+                cout << "Move left\n";
+                break;
+            case 'b':
+                cout << "Move right\n";
+                break;
+            case 'c':
+                cout << "Move forward\n";
+                break;
+            case 'd':
+                cout << "Move backward\n";
+                break;
+            case 'e':
+                cout << "Jump\n";
+                break;
+            case 'f':
+                cout << "Stop\n";
+                return 0;
+            default:
+                cout << "You have selected wrong key, please try again\n";
+        }
+    }
+}
